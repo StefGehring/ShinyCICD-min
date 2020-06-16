@@ -8,10 +8,12 @@
 \usage{
 mod_faithful_histogram_ui(id)
 
-mod_faithful_histogram_server(input, output, session)
+mod_faithful_histogram_server(input, output, session, variable)
 }
 \arguments{
 \item{id, input, output, session}{Internal parameters for {shiny}.}
+
+\item{variable}{the old faithful variable to plot the histogram for}
 }
 \description{
 UI and server function for an example Shiny module.
