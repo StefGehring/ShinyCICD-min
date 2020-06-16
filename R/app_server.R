@@ -7,6 +7,7 @@
 #' @noRd
 app_server <- function(input, output, session) {
 
-  callModule(mod_faithful_histogram_server, "hist","waiting")
+  callModule(mod_faithful_histogram_server, "hist-waiting","waiting")
+  callModule(mod_faithful_histogram_server, "hist-eruption","eruptions")
 
 }
