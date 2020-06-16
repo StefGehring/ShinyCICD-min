@@ -36,6 +36,7 @@ mod_faithful_histogram_ui <- function(id) {
   )
 }
 
+#' @param variable the old faithful variable to plot the histogram for
 #' @rdname mod_faithful_histogram
 mod_faithful_histogram_server <- function(input, output, session, variable) {
   ns <- session$ns
