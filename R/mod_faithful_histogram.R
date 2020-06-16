@@ -37,11 +37,11 @@ mod_faithful_histogram_ui <- function(id) {
 }
 
 #' @rdname mod_faithful_histogram
-mod_faithful_histogram_server <- function(input, output, session) {
+mod_faithful_histogram_server <- function(input, output, session, variable) {
   ns <- session$ns
   output$distPlot <- renderPlot({
     # generate bins based on input$bins from ui.R
-    x    <- datasets::faithful[, "waiting"]
+    x    <- datasets::faithful[, variable]
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
     # draw the histogram with the specified number of bins
